@@ -1,58 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FreshBites Restaurant</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basic Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="calculator">
+    <input type="text" id="display" readonly>
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="deleteLast()">DEL</button>
+      <button onclick="appendOperator('/')">÷</button>
+      <button onclick="appendOperator('*')">×</button>
 
-  <nav>
-    <div class="logo">FreshBites</div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+      <button onclick="appendNumber('7')">7</button>
+      <button onclick="appendNumber('8')">8</button>
+      <button onclick="appendNumber('9')">9</button>
+      <button onclick="appendOperator('-')">−</button>
 
-  <header>
-    <div class="header-content">
-      <h1>Welcome to FreshBites</h1>
-      <p>Delicious food, made fresh every day.</p>
-      <a href="#menu" class="btn">View Menu</a>
+      <button onclick="appendNumber('4')">4</button>
+      <button onclick="appendNumber('5')">5</button>
+      <button onclick="appendNumber('6')">6</button>
+      <button onclick="appendOperator('+')">+</button>
+
+      <button onclick="appendNumber('1')">1</button>
+      <button onclick="appendNumber('2')">2</button>
+      <button onclick="appendNumber('3')">3</button>
+      <button onclick="calculateResult()">=</button>
+
+      <button onclick="appendNumber('0')" class="zero">0</button>
+      <button onclick="appendNumber('.')">.</button>
     </div>
-  </header>
+  </div>
 
-  <section id="about" class="about">
-    <div class="about-text">
-      <h2>About Us</h2>
-      <p>At FreshBites, we blend tradition with creativity to bring you mouth-watering dishes using locally-sourced ingredients. Our chefs are passionate about food and service excellence.</p>
-    </div>
-  </section>
-
-  <section id="menu" class="menu">
-    <h2>Our Menu</h2>
-    <div class="menu-items">
-      <div class="menu-item">
-        <img src="images/chicken.jpg" alt="Dish 1">
-        <h3>Grilled Chicken</h3>
-        <p>Served with fresh herbs and lemon butter sauce.</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/pasta.jpg" alt="Dish 2">
-        <h3>Italian Pasta</h3>
-        <p>Rich creamy Alfredo sauce with parmesan and herbs.</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/veg.jpg" alt="Dish 3">
-        <h3>Veggie Delight</h3>
-        <p>Seasonal vegetables grilled to perfection.</p>
-      </div>
-    </div>
-  </section>
-
- 
+  <script src="script.js"></script>
+</body>
+</html>
